@@ -6,7 +6,7 @@ public class game {
         int cpu = (int)(Math.random() * 3);
         int user, draw=0, lose=0, won=0,turn=3;
         System.out.println(" welcome ");
-        for ( int i = 1; i <= 3; i++ )
+        do
         {
             System.out.println(" SCORE: PC " + lose + "   USER " + won);
             System.out.println(" you have " + turn + " turns ");
@@ -46,22 +46,15 @@ public class game {
                     lose++;
                 }
             }
-            if(won==2 || lose==2)
-            {
-            i=3;
-            }
-            turn=3-i;
-        }
+            turn++;
+        }while(won != 2 && lose != 2);
 
-        if(draw == 3){
-            System.out.println("DRAW");
-            System.out.println(" SCORE: PC " + lose + "   USER " + won);
-	    }else if(won > lose){
-            System.out.println("WINNER");
-            System.out.println(" SCORE: PC " + lose + "   USER " + won);
+        if(won > lose){
+            System.out.println("            WINNER");
+            System.out.println("            SCORE: PC " + lose + "   USER " + won);
         }else{
-            System.out.println("LOSER");
-            System.out.println(" SCORE: PC " + lose + "   USER " + won);
+            System.out.println("            LOSER");
+            System.out.println("            SCORE: PC " + lose + "   USER " + won);
         }
     }
 }
