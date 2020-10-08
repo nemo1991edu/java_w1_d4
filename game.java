@@ -4,11 +4,11 @@ public class game {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
         int cpu = (int)(Math.random() * 3);
-        int user, draw=0, lose=0, won=0,turn=3;
+        int user, draw=0, lose=0, won=0,turn=0;
         System.out.println(" welcome ");
         do
         {
-            System.out.println(" SCORE: PC " + lose + "   USER " + won);
+            System.out.println(" SCORE: PC " + lose + "   USER " + won + "   DRAWS " + draw);
             System.out.println(" you have " + turn + " turns ");
             do{
 		        System.out.println(" scissor (0), rock (1), paper (2): ");
